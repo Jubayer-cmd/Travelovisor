@@ -1,6 +1,8 @@
 import React from "react";
 import Banner from "../Banner/Banner";
 import NavBar from "../Navbar/NavBar";
+import Card from "./Card";
+import Footer from "./Footer";
 import Hero1 from "./Hero1";
 
 function Home() {
@@ -9,6 +11,8 @@ function Home() {
       <NavBar></NavBar>
       <Banner></Banner>
       <Hero1></Hero1>
+      <Card></Card>
+      <Footer></Footer>
     </div>
   );
 }
