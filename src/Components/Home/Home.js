@@ -1,9 +1,14 @@
 import React from "react";
 import Banner from "../Banner/Banner";
 import NavBar from "../Navbar/NavBar";
+import Accordion from "./Accordion";
 import Card from "./Card";
 import Footer from "./Footer";
 import Hero1 from "./Hero1";
+import Newsletter from "./Newsletter";
+import Slider from "./Slider";
+import State from "./State";
+import Testimonials from "./Testimonials";
 
 function Home() {
   return (
@@ -12,6 +17,11 @@ function Home() {
       <Banner></Banner>
       <Hero1></Hero1>
       <Card></Card>
+      <Slider></Slider>
+      <State></State>
+      <Testimonials></Testimonials>
+      <Accordion></Accordion>
+      <Newsletter></Newsletter>
       <Footer></Footer>
     </div>
   );
