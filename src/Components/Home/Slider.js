@@ -35,7 +35,7 @@ const Slider = () => {
             slideShadows: false,
           }}
           slidesPerView={2}
-          spaceBetween={30}
+          spaceBetween={15}
           centeredSlides
           style={{ height: "750px" }}
           modules={[Autoplay, EffectCoverflow, Pagination]}
