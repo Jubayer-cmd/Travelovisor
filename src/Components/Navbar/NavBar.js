@@ -1,7 +1,19 @@
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import auth from "./../../firebase.init";
 
 export default function NavBar() {
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+  console.log(user);
+  const logout = () => {
+    signOut(auth);
+    toast("Logging Out successfully");
+    navigate("/");
+  };
   const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
@@ -20,20 +32,10 @@ export default function NavBar() {
     window.localStorage.setItem("DarkTheme", JSON.stringify(darkTheme));
   }, [darkTheme]);
 
-  // const [user] = useAuthState(auth);
-
-  // const logout = () => {
-  //     signOut(auth);
-  //     localStorage.removeItem('accessToken');
-  // };
-
   const menuItems = (
     <>
       <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/">Home</Link>
-      </li>
-      <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
-        <Link to="/appointment">Appointment</Link>
       </li>
       <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/review">Review</Link>
@@ -44,10 +46,11 @@ export default function NavBar() {
       <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/about">About</Link>
       </li>
-      {/* {
-          user && <li><Link to="/dashboard">Dashboard</Link></li>
-      }
-      <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li> */}
+      {user && (
+        <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
     </>
   );
   return (
@@ -77,18 +80,18 @@ export default function NavBar() {
             {menuItems}
           </ul>
         </div>
-        <a
-          href="/"
-          className="btn btn-ghost normal-case text-2xl dark:text-white"
+        <Link
+          className="font-bold text-2xl dark:text-violet-500 sm:text-3xl justify-center ml-0  sm:ml-20 hover:text-violet-500"
+          to="/"
         >
           Travelovisor
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <label class="swap swap-rotate pl-52">
+        <label class="swap swap-rotate ml-52 pr-3">
           <input type="checkbox" onClick={() => setDarkTheme(!darkTheme)} />
 
           <svg
@@ -107,30 +110,36 @@ export default function NavBar() {
             <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
           </svg>
         </label>
-        <div class="dropdown dropdown-end ml-auto">
-          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-            <div class="w-8 rounded-full">
-              <img src="https://placeimg.com/80/80/people" alt="" />
-            </div>
-          </label>
-          <ul
-            tabindex="0"
-            class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 dark:bg-slate-800 dark:text-white "
-          >
-            <li>
-              <a class="justify-between" href="/">
-                Profile
-                <span class="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <p>Settings</p>
-            </li>
-            <li>
-              <p>Logout</p>
-            </li>
-          </ul>
-        </div>
+        {user ? (
+          <div class="dropdown dropdown-end mr-0 sm:mr-20">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://placeimg.com/80/80/people" alt="" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 dark:bg-slate-800 dark:text-white "
+            >
+              <li>
+                <Link to="/dashboard" class="justify-between">
+                  {user.displayName ?? "user"}
+                  <span class="badge">{user.email}</span>
+                </Link>
+              </li>
+              <li>
+                <p>Settings</p>
+              </li>
+              <li>
+                <p onClick={logout}>Logout</p>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div className="p-2 bg-violet-500 mx-5 rounded-lg font-bold text-white">
+            <Link to="/login">Login</Link>
+          </div>
+        )}
       </div>
     </div>
   );
