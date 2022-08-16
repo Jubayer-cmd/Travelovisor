@@ -3,14 +3,14 @@ import React from "react";
 const State = () => {
   return (
     <div className="grid place-items-center">
-      <div class="stats w-4/5 my-14 shadow-lg dark:bg-[#172131] dark:text-[#E2E8F0]">
-        <div class="stat">
-          <div class="stat-figure text-secondary">
+      <div className="stats w-4/5 my-14 shadow-lg dark:bg-[#172131] dark:text-[#E2E8F0]">
+        <div className="stat">
+          <div className="stat-figure text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-8 h-8 stroke-current"
+              className="inline-block w-8 h-8 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -20,18 +20,18 @@ const State = () => {
               ></path>
             </svg>
           </div>
-          <div class="stat-title">Travel</div>
-          <div class="stat-value">31K</div>
-          <div class="stat-desc">Jan 1st - Feb 1st</div>
+          <div className="stat-title">Travel</div>
+          <div className="stat-value">31K</div>
+          <div className="stat-desc">Jan 1st - Feb 1st</div>
         </div>
 
-        <div class="stat">
-          <div class="stat-figure text-secondary">
+        <div className="stat">
+          <div className="stat-figure text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-8 h-8 stroke-current"
+              className="inline-block w-8 h-8 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -41,18 +41,18 @@ const State = () => {
               ></path>
             </svg>
           </div>
-          <div class="stat-title">New Users</div>
-          <div class="stat-value">4,200</div>
-          <div class="stat-desc">↗︎ 400 (22%)</div>
+          <div className="stat-title">New Users</div>
+          <div className="stat-value">4,200</div>
+          <div className="stat-desc">↗︎ 400 (22%)</div>
         </div>
 
-        <div class="stat">
-          <div class="stat-figure text-secondary">
+        <div className="stat">
+          <div className="stat-figure text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="inline-block w-8 h-8 stroke-current"
+              className="inline-block w-8 h-8 stroke-current"
             >
               <path
                 stroke-linecap="round"
@@ -62,9 +62,9 @@ const State = () => {
               ></path>
             </svg>
           </div>
-          <div class="stat-title">New Registers</div>
-          <div class="stat-value">1,200</div>
-          <div class="stat-desc">↘︎ 90 (14%)</div>
+          <div className="stat-title">New Registers</div>
+          <div className="stat-value">1,200</div>
+          <div className="stat-desc">↘︎ 90 (14%)</div>
         </div>
       </div>
     </div>

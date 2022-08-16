@@ -82,14 +82,14 @@ const Login = () => {
                 name="email"
                 type="email"
                 placeholder="Your E-mail"
-                class="input input-bordered dark:text-black w-full max-w-sm mt-5"
+                className="input input-bordered dark:text-black w-full max-w-sm mt-5"
                 required
               />
               <input
                 type="password"
                 name="password"
                 placeholder="Enter Password"
-                class="input input-bordered dark:text-black w-full max-w-sm mt-5"
+                className="input input-bordered dark:text-black w-full max-w-sm mt-5"
                 required
               />
               {/* {loading && <Loading></Loading>}
@@ -118,7 +118,7 @@ const Login = () => {
               onClick={handlesignin}
               className="btn btn-outline px-24 mb-5 dark:bg-violet-500 dark:text-white"
             >
-              <i class="fa-brands fa-lg fa-google text-green-500 mr-2"></i>{" "}
+              <i className="fa-brands fa-lg fa-google text-green-500 mr-2"></i>{" "}
               Continue with Google
             </button>
           </div>

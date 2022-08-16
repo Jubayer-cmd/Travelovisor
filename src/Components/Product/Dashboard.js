@@ -8,16 +8,16 @@ const Dashboard = () => {
   const [admin] = useAdmin(user);
   return (
     <div className="dark:bg-[#0B1222] dark:text-white">
-      <div className="d-flex ">
-        <div class="drawer drawer-mobile">
-          <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-          <div class="drawer-content flex flex-col ">
+      <div className="flex ">
+        <div className="drawer drawer-mobile">
+          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col overflow-hidden">
             <label
               for="my-drawer-2"
-              class="btn dark:bg-[#021338] drawer-button lg:hidden"
+              className="btn dark:bg-[#021338] drawer-button lg:hidden"
             >
               <svg
-                class="swap-off fill-current"
+                className="swap-off fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
                 height="32"
@@ -31,12 +31,12 @@ const Dashboard = () => {
               <Outlet></Outlet>
             </div>
           </div>
-          <div class="drawer-side ">
-            <label for="my-drawer-2" class="drawer-overlay"></label>
-            <ul class="menu bg-violet-300 dark:text-white dark:bg-[#021338] p-4 overflow-y-auto w-80 divide-y divide-gray-100 text-base-content">
+          <div className="drawer-side ">
+            <label for="my-drawer-2" className="drawer-overlay"></label>
+            <ul className="menu bg-violet-300 dark:text-white dark:bg-[#021338] p-4 overflow-y-auto w-80 divide-y divide-gray-100 text-base-content">
               <li>
                 <Link to="/dashboard">
-                  <i class="fa-solid fa-user"></i>
+                  <i className="fa-solid fa-user"></i>
                   My Profile
                 </Link>
               </li>
@@ -44,12 +44,13 @@ const Dashboard = () => {
                 <>
                   <li>
                     <Link to="/dashboard/order">
-                      <i class="fa-solid fa-list-check"></i> My Orders
+                      <i className="fa-solid fa-list-check"></i> My Orders
                     </Link>
                   </li>
                   <li>
                     <Link to="/dashboard/review">
-                      <i class="fa-brands fa-stack-exchange"></i> Add a review
+                      <i className="fa-brands fa-stack-exchange"></i> Add a
+                      review
                     </Link>
                   </li>
                 </>
@@ -58,17 +59,18 @@ const Dashboard = () => {
                 <>
                   <li>
                     <Link to="/dashboard/manageOrder">
-                      <i class="fa-solid fa-bars-progress"></i> Manage Order
+                      <i className="fa-solid fa-bars-progress"></i> Manage Order
                     </Link>
                   </li>
                   <li>
                     <Link to="/dashboard/manageProducts">
-                      <i class="fa-solid fa-basket-shopping"></i>Manage Product
+                      <i className="fa-solid fa-basket-shopping"></i>Manage
+                      Product
                     </Link>
                   </li>
                   <li>
                     <Link to="/dashboard/addProduct">
-                      <i class="fa-solid fa-cart-plus"></i>Add Product
+                      <i className="fa-solid fa-cart-plus"></i>Add Product
                     </Link>
                   </li>
                 </>

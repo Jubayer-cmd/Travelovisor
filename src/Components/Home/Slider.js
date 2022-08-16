@@ -41,121 +41,121 @@ const Slider = () => {
           modules={[Autoplay, EffectCoverflow, Pagination]}
         >
           <SwiperSlide>
-            <div class="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
+            <div className="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
               <figure>
                 <img
                   src="https://images.unsplash.com/photo-1645985926275-d2184d7c2d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                   alt="Shoes"
                 />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">
+              <div className="card-body">
+                <h2 className="card-title">
                   Shoes!
-                  <div class="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
+            <div className="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
               <figure>
                 <img
                   src="https://images.unsplash.com/photo-1585993573411-b6eaed50db98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                   alt="Shoes"
                 />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">
+              <div className="card-body">
+                <h2 className="card-title">
                   Shoes!
-                  <div class="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700 ">
+            <div className="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700 ">
               <figure>
                 <img
                   src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                   alt="Shoes"
                 />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">
+              <div className="card-body">
+                <h2 className="card-title">
                   Shoes!
-                  <div class="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
+            <div className="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
               <figure>
                 <img
                   src="https://images.unsplash.com/photo-1660084538570-e1e5250dbe96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                   alt="Shoes"
                 />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">
+              <div className="card-body">
+                <h2 className="card-title">
                   Shoes!
-                  <div class="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
+            <div className="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
               <figure>
                 <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">
+              <div className="card-body">
+                <h2 className="card-title">
                   Shoes!
-                  <div class="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
+            <div className="card w-full bg-base-100 shadow-xl dark:bg-gray-800 dark:border-gray-700">
               <figure>
                 <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">
+              <div className="card-body">
+                <h2 className="card-title">
                   Shoes!
-                  <div class="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <div class="badge badge-outline">Fashion</div>
-                  <div class="badge badge-outline">Products</div>
+                <div className="card-actions justify-end">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
                 </div>
               </div>
             </div>

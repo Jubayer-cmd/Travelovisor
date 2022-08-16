@@ -91,11 +91,11 @@ export default function NavBar() {
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <label class="swap swap-rotate ml-52 pr-3">
+        <label className="swap swap-rotate ml-52 pr-3">
           <input type="checkbox" onClick={() => setDarkTheme(!darkTheme)} />
 
           <svg
-            class="swap-on fill-current w-8 h-8 dark:text-white"
+            className="swap-on fill-current w-8 h-8 dark:text-white"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -103,7 +103,7 @@ export default function NavBar() {
           </svg>
 
           <svg
-            class="swap-off fill-current w-8 h-8 dark:text-white"
+            className="swap-off fill-current w-8 h-8 dark:text-white"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -111,20 +111,20 @@ export default function NavBar() {
           </svg>
         </label>
         {user ? (
-          <div class="dropdown dropdown-end mr-0 sm:mr-20">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-              <div class="w-8 rounded-full">
-                <img src="https://placeimg.com/80/80/people" alt="" />
+          <div className="dropdown dropdown-end mr-0 sm:mr-20">
+            <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+              <div className="w-8 rounded-full">
+                <img src={"https://placeimg.com/80/80/people"} alt="" />
               </div>
             </label>
             <ul
               tabindex="0"
-              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 dark:bg-slate-800 dark:text-white "
+              className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 dark:bg-slate-800 dark:text-white "
             >
               <li>
-                <Link to="/dashboard" class="justify-between">
+                <Link to="/dashboard" className="justify-between">
                   {user.displayName ?? "user"}
-                  <span class="badge">{user.email}</span>
+                  <span className="badge badge-sm">{user.email}</span>
                 </Link>
               </li>
               <li>

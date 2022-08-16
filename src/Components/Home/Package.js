@@ -23,7 +23,7 @@ const Package = () => {
           </span>
         </h1>
         <p className="mt-2 text-xl">🚀 Place: {pack.travel}</p>
-        <div class="divider"></div>
+        <div className="divider"></div>
         <div className="grid grid-cols-3 m-auto">
           <div className="flex justify-center">
             <img
@@ -66,11 +66,11 @@ const Package = () => {
             alt=""
           />
         </div>
-        <div class="overflow-x-auto dark:text-black">
+        <div className="overflow-x-auto dark:text-black">
           <h1 className="text-2xl font-bold text-violet-600 uppercase my-3">
             Food Menu:
           </h1>
-          <table class="table table-zebra w-full">
+          <table className="table table-zebra w-full">
             <tbody>
               <tr>
                 <th>Breakfast</th>
