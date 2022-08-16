@@ -9,7 +9,7 @@ import RequireAdmin from "./Components/Login/RequireAdmin";
 import RequireAuth from "./Components/Login/RequireAuth";
 import Signup from "./Components/Login/Signup";
 import NavBar from "./Components/Navbar/NavBar";
-import AddProduct from "./Components/Product/AddProduct";
+import AddPackage from "./Components/Product/AddPackage";
 import Dashboard from "./Components/Product/Dashboard";
 import ManageOrder from "./Components/Product/ManageOrder";
 import ManageProduct from "./Components/Product/ManageProduct";
@@ -59,10 +59,10 @@ function App() {
             }
           ></Route>
           <Route
-            path="addProduct"
+            path="addPackage"
             element={
               <RequireAdmin>
-                <AddProduct></AddProduct>
+                <AddPackage></AddPackage>
               </RequireAdmin>
             }
           ></Route>

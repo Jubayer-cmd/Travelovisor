@@ -8,7 +8,7 @@ const Package = () => {
   const { id } = useParams();
   const [pack, setPack] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/travel/${id}`;
+    const url = `https://quiet-fortress-52901.herokuapp.com/travel/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPack(data));

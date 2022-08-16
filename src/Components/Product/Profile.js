@@ -8,11 +8,11 @@ const Profile = () => {
   const email = user.email;
   const [data, setData] = useState({});
   useEffect(() => {
-    const url = `http://localhost:5000/profile/${email}`;
+    const url = `https://quiet-fortress-52901.herokuapp.com/profile/${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, []);
+  }, [user]);
   console.log(data);
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +29,7 @@ const Profile = () => {
       image: image,
     };
     console.log(profile);
-    fetch(`http://localhost:5000/profile/${email}`, {
+    fetch(`https://quiet-fortress-52901.herokuapp.com/profile/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

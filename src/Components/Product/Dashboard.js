@@ -65,12 +65,12 @@ const Dashboard = () => {
                   <li>
                     <Link to="/dashboard/manageProducts">
                       <i className="fa-solid fa-basket-shopping"></i>Manage
-                      Product
+                      Package
                     </Link>
                   </li>
                   <li>
-                    <Link to="/dashboard/addProduct">
-                      <i className="fa-solid fa-cart-plus"></i>Add Product
+                    <Link to="/dashboard/addPackage">
+                      <i className="fa-solid fa-cart-plus"></i>Add Package
                     </Link>
                   </li>
                 </>

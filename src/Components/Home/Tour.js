@@ -5,7 +5,7 @@ const Tour = () => {
   const [travel, setTravel] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/travel")
+    fetch("https://quiet-fortress-52901.herokuapp.com/travel")
       .then((res) => res.json())
       .then((data) => setTravel(data));
   }, [travel]);
