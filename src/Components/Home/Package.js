@@ -2,8 +2,13 @@ import { format } from "date-fns";
 import { default as React, useEffect, useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import { useParams } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import auth from "./../../firebase.init";
+
 const Package = () => {
+  const [user] = useAuthState(auth);
   const [date, setDate] = useState(new Date());
   const { id } = useParams();
   const [pack, setPack] = useState([]);
@@ -13,6 +18,38 @@ const Package = () => {
       .then((res) => res.json())
       .then((data) => setPack(data));
   }, [id]);
+  const navigate = useNavigate();
+  const Tdate = format(date, "PP");
+  const handleBuy = () => {
+    const email = user?.email;
+    const buy = {
+      name: pack.name,
+      image: pack.image,
+      person: pack.person,
+      duration: pack.duration,
+      price: pack.price,
+      email: email,
+      date: Tdate,
+    };
+    if (user) {
+      fetch("https://quiet-fortress-52901.herokuapp.com/payment", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(buy),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            toast.success("Added to cart! To buy go to profile!");
+          }
+        });
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 dark:bg-[#0B1222]  text-base gap-4">
       <div className="md:col-span-2 dark:text-[#DCE2EA] p-5">
@@ -160,7 +197,10 @@ const Package = () => {
             </p>
           </div>
           <div className="ml-5">
-            <button className="btn btn-primary px-32 my-2  uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary">
+            <button
+              onClick={handleBuy}
+              className="btn btn-primary px-32 my-2  uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary"
+            >
               Buy
             </button>
           </div>

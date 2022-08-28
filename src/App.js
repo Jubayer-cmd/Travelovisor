@@ -9,6 +9,9 @@ import RequireAdmin from "./Components/Login/RequireAdmin";
 import RequireAuth from "./Components/Login/RequireAuth";
 import Signup from "./Components/Login/Signup";
 import NavBar from "./Components/Navbar/NavBar";
+import AllPackage from "./Components/Others/AllPackage";
+import NotFound from "./Components/Others/NotFound";
+import Payment from "./Components/Payments/Payment";
 import AddPackage from "./Components/Product/AddPackage";
 import Dashboard from "./Components/Product/Dashboard";
 import ManageOrder from "./Components/Product/ManageOrder";
@@ -25,8 +28,17 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/package/:id" element={<Package></Package>}></Route>
         <Route path="/signin" element={<Signup></Signup>}></Route>
-        <Route path="login" element={<Login></Login>}></Route>
-
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/packages" element={<AllPackage></AllPackage>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route
+          path="/payment/:id"
+          element={
+            <RequireAuth>
+              <Payment></Payment>
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="/dashboard"
           element={

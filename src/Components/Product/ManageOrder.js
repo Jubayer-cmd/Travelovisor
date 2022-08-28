@@ -1,9 +1,55 @@
 import React from "react";
+import { useQuery } from "react-query";
+import Loading from "../Login/Loading";
+
+import OrderRow from "./OrderRow";
 
 const ManageOrder = () => {
+  const {
+    data: purchase,
+    isLoading,
+    refetch,
+  } = useQuery("adminorder", () =>
+    fetch("https://quiet-fortress-52901.herokuapp.com/payment", {
+      method: "GET",
+      headers: {},
+    }).then((res) => res.json())
+  );
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div>
-      <h1 className="text-center text-2xl font-bold my-2 ">Manage Orders</h1>
+      {" "}
+      <div class="overflow-x-auto">
+        <table class="table  table-compact w-full dark:text-black">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Duration</th>
+              <th>Person</th>
+              <th>Date</th>
+              <th>E-mail</th>
+              <th></th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {purchase.map((buy, index) => (
+              <OrderRow
+                key={buy._id}
+                buy={buy}
+                index={index}
+                refetch={refetch}
+              ></OrderRow>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

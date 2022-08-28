@@ -18,8 +18,8 @@ const ManageProduct = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="">
-      <h1 className="text-center text-2xl font-bold my-2 ">Manage products</h1>
+    <div className="m-5">
+      <h1 className="text-center text-2xl font-bold my-2 ">Manage Package</h1>
       <div>
         <div class="overflow-x-auto">
           <table class="table  table-compact w-full dark:text-black">

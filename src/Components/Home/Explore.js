@@ -45,7 +45,9 @@ const Explore = () => {
               </div>
               <div className="card-body items-center text-center">
                 <h2 className="card-title text-green-400">Shimul bagan</h2>
-                <p>📍SunamGanj</p>
+                <p>
+                  <i class="fas fa-location"></i> SunamGanj
+                </p>
               </div>
             </div>
           </SwiperSlide>

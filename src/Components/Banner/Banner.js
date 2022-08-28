@@ -6,10 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./Banner.css";
 
 // import required modules
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 
 const Banner = () => {
   return (
@@ -19,8 +20,11 @@ const Banner = () => {
         spaceBetween={30}
         loop={true}
         autoplay={true}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        modules={[Navigation, Autoplay]}
+        modules={[Navigation, Autoplay, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>

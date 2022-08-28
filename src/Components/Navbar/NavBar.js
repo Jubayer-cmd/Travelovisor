@@ -8,7 +8,6 @@ import auth from "./../../firebase.init";
 export default function NavBar() {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
-  console.log(user);
   const logout = () => {
     signOut(auth);
     toast("Logging Out successfully");
@@ -38,7 +37,7 @@ export default function NavBar() {
         <Link to="/">Home</Link>
       </li>
       <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
-        <Link to="/review">Review</Link>
+        <Link to="/review">Packages</Link>
       </li>
       <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/contact">Contact</Link>
@@ -46,11 +45,6 @@ export default function NavBar() {
       <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/about">About</Link>
       </li>
-      {user && (
-        <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-      )}
     </>
   );
   return (
@@ -128,7 +122,7 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <p>Settings</p>
+                <Link to="/dashboard">Dashboard</Link>
               </li>
               <li>
                 <p onClick={logout}>Logout</p>

@@ -66,7 +66,7 @@ const ManagePackageRow = ({ buy, index, refetch }) => {
       <td>{snacks}</td>
       <td>{dinner}</td>
       <td>
-        {include[0]},{include[1]},{include[2]},{include[3]}
+        {include?.[0]},{include?.[1]},{include?.[2]},{include?.[3]}
       </td>
       <td className="w-20">{day1}</td>
       <td>{day2}</td>
