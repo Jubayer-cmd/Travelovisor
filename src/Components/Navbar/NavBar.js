@@ -33,16 +33,16 @@ export default function NavBar() {
 
   const menuItems = (
     <>
-      <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
+      <li className="dark:text-white mx-3 dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/">Home</Link>
       </li>
-      <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
+      <li className="dark:text-white mx-3 dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/review">Packages</Link>
       </li>
-      <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
+      <li className="dark:text-white mx-3 dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/contact">Contact</Link>
       </li>
-      <li className="dark:text-white dark:hover:bg-gray-400 hover:rounded-lg font-medium">
+      <li className="dark:text-white mx-3 dark:hover:bg-gray-400 hover:rounded-lg font-medium">
         <Link to="/about">About</Link>
       </li>
     </>

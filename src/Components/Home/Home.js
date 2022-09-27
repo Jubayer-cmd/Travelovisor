@@ -6,6 +6,7 @@ import Explore from "./Explore";
 import Footer from "./Footer";
 import Hero1 from "./Hero1";
 import Newsletter from "./Newsletter";
+import Search from "./Search";
 import Slider from "./Slider";
 import State from "./State";
 import Testimonials from "./Testimonials";
@@ -15,6 +16,7 @@ function Home() {
   return (
     <div className="dark:bg-[#0B1222] dark:text-[#8D9BB0]">
       <Banner></Banner>
+      <Search></Search>
       <Hero1></Hero1>
       <Card></Card>
       <Tour></Tour>

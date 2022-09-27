@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import auth from "./../../firebase.init";
 
 const Profile = () => {
-  const [user] = useAuthState(auth);
+  const { user } = useAuthState(auth);
   const email = user.email;
   const [data, setData] = useState({});
   useEffect(() => {
@@ -12,7 +12,7 @@ const Profile = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, [user]);
+  }, [email]);
   console.log(data);
   const handleSubmit = (event) => {
     event.preventDefault();

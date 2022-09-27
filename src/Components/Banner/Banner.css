@@ -51,9 +51,26 @@ body {
   margin-right: auto;
 }
 
+.swiper2 {
+  width: 30% !important;
+  height: 100%;
+  padding: 35px 0;
+}
+
+.hero1 {
+  display: block;
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover;
+}
+
 @media only screen and (max-width: 600px) {
   .swiper-slide img {
-    height: 300px;
+    height: auto;
     object-fit: cover;
+  }
+  .swiper2 {
+    width: 100% !important;
+    padding: 20px;
   }
 }
