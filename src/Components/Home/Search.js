@@ -47,7 +47,8 @@ const Search = () => {
           </h1>
           <h1 className="text-5xl bold font-press-start">Tour Destinations</h1>
           <div className="flex items-center">
-            <div className="my-2 mx-1" style={{ width: 300 }}>
+            <div className="my-2 mx-1 searc">
+              {/* style={{ width: 300 }} */}
               <ReactSearchAutocomplete
                 items={travel}
                 fuseOptions={{ keys: ["name"] }} // Search on both fields

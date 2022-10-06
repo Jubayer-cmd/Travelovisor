@@ -12,3 +12,14 @@
   text-align: center;
   color: white;
 }
+
+.searc {
+  width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .searc {
+    margin: auto;
+    width: 150px;
+  }
+}
