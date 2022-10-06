@@ -35,7 +35,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://img.freepik.com/free-photo/travel-concept-with-landmarks_23-2149153256.jpg?t=st=1663235160~exp=1663235760~hmac=721e609b8e1e6462a9bbee75767c4f6d26df13908290425a1f18d596a0df9815"
+            src="https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
             alt=""
           />
         </SwiperSlide>
@@ -47,7 +47,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            src="https://images.unsplash.com/photo-1483444308400-fb9510501d23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80"
             alt=""
           />
         </SwiperSlide>

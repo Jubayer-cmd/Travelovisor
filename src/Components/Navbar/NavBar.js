@@ -106,13 +106,13 @@ export default function NavBar() {
         </label>
         {user ? (
           <div className="dropdown dropdown-end mr-0 sm:mr-20">
-            <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+            <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-8 rounded-full">
                 <img src={"https://placeimg.com/80/80/people"} alt="" />
               </div>
             </label>
             <ul
-              tabindex="0"
+              tabIndex="0"
               className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 dark:bg-slate-800 dark:text-white "
             >
               <li>

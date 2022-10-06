@@ -49,6 +49,7 @@ const Login = () => {
     const password = event.target.password.value;
     await signInWithEmailAndPassword(email, password);
     toast("login sucesss");
+    navigate(from, { replace: true });
   };
 
   const resetPassword = async () => {

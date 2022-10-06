@@ -4,15 +4,15 @@ import { toast } from "react-toastify";
 import auth from "./../../firebase.init";
 
 const Profile = () => {
-  const { user } = useAuthState(auth);
-  const email = user.email;
+  const [user] = useAuthState(auth);
+  const mail = user.email;
   const [data, setData] = useState({});
   useEffect(() => {
-    const url = `https://quiet-fortress-52901.herokuapp.com/profile/${email}`;
+    const url = `https://quiet-fortress-52901.herokuapp.com/profile/${mail}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, [email]);
+  }, []);
   console.log(data);
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +29,7 @@ const Profile = () => {
       image: image,
     };
     console.log(profile);
-    fetch(`https://quiet-fortress-52901.herokuapp.com/profile/${email}`, {
+    fetch(`https://quiet-fortress-52901.herokuapp.com/profile/${mail}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

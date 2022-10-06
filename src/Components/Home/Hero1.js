@@ -9,7 +9,7 @@ const Hero1 = () => {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
             className="w-80 sm:w-96 md:ml-40 rounded-lg shadow-2xl"
             alt=""
           />
