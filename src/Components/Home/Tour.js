@@ -5,10 +5,11 @@ const Tour = () => {
   const [travel, setTravel] = useState([]);
 
   useEffect(() => {
-    fetch("https://quiet-fortress-52901.herokuapp.com/travel")
+    fetch("https://travelovidor.onrender.com/travel")
       .then((res) => res.json())
       .then((data) => setTravel(data));
-  }, [travel]);
+  }, []);
+
   return (
     <div>
       <h1 className="text-4xl text-center font-bold text-violet-700 my-20 dark:text-sky-500">

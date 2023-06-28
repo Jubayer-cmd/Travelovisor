@@ -8,7 +8,7 @@ const Profile = () => {
   const mail = user.email;
   const [data, setData] = useState({});
   useEffect(() => {
-    const url = `https://quiet-fortress-52901.herokuapp.com/profile/${mail}`;
+    const url = `https://travelovidor.onrender.com/profile/${mail}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
@@ -29,7 +29,7 @@ const Profile = () => {
       image: image,
     };
     console.log(profile);
-    fetch(`https://quiet-fortress-52901.herokuapp.com/profile/${mail}`, {
+    fetch(`https://travelovidor.onrender.com/profile/${mail}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

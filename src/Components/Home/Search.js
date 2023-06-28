@@ -7,7 +7,7 @@ const Search = () => {
   const navigate = useNavigate();
   const [travel, setTravel] = useState([]);
   useEffect(() => {
-    fetch("https://quiet-fortress-52901.herokuapp.com/travel")
+    fetch("https://travelovidor.onrender.com/travel")
       .then((res) => res.json())
       .then((data) => setTravel(data));
   }, [travel]);

@@ -38,7 +38,7 @@ const AddPackage = () => {
       day3: day3,
     };
     console.log(tourData);
-    fetch(`https://quiet-fortress-52901.herokuapp.com/travel`, {
+    fetch(`https://travelovidor.onrender.com/travel`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

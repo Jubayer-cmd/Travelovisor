@@ -11,7 +11,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
   const { data: Payment, isLoading } = useQuery("payments", () =>
-    fetch(`https://quiet-fortress-52901.herokuapp.com/payment/${id}`, {
+    fetch(`https://travelovidor.onrender.com/payment/${id}`, {
       method: "GET",
       headers: {},
     }).then((res) => res.json())
@@ -21,7 +21,7 @@ const Payment = () => {
   }
 
   const Payssl = () => {
-    fetch(`https://quiet-fortress-52901.herokuapp.com/ssl-request`, {
+    fetch(`https://travelovidor.onrender.com/ssl-request`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

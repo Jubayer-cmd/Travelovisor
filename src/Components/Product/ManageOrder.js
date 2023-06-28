@@ -10,7 +10,7 @@ const ManageOrder = () => {
     isLoading,
     refetch,
   } = useQuery("adminorder", () =>
-    fetch("https://quiet-fortress-52901.herokuapp.com/payment", {
+    fetch("https://travelovidor.onrender.com/payment", {
       method: "GET",
       headers: {},
     }).then((res) => res.json())

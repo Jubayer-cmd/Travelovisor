@@ -9,7 +9,7 @@ const ManageProduct = () => {
     isLoading,
     refetch,
   } = useQuery("adminorder", () =>
-    fetch("https://quiet-fortress-52901.herokuapp.com/travel", {
+    fetch("https://travelovidor.onrender.com/travel", {
       method: "GET",
       headers: {},
     }).then((res) => res.json())

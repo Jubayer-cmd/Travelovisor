@@ -20,7 +20,7 @@ const ManagePackageRow = ({ buy, index, refetch }) => {
     day3,
   } = buy;
   const handleDelete = (_id) => {
-    const url = `https://quiet-fortress-52901.herokuapp.com/travel/${_id}`;
+    const url = `https://travelovidor.onrender.com/travel/${_id}`;
     fetch(url, {
       method: "DELETE",
       headers: {},

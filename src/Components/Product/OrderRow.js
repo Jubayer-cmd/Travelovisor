@@ -6,7 +6,7 @@ const OrderRow = ({ buy, index, refetch }) => {
   const { _id, image, name, duration, price, email, paid, date, person } = buy;
 
   const handleDelete = (id) => {
-    const url = `https://quiet-fortress-52901.herokuapp.com/payment/${id}`;
+    const url = `https://travelovidor.onrender.com/payment/${id}`;
     fetch(url, {
       method: "DELETE",
       headers: {},

@@ -13,7 +13,7 @@ const Order = () => {
     isLoading,
     refetch,
   } = useQuery("ordering", () =>
-    fetch(`https://quiet-fortress-52901.herokuapp.com/order/${user.email}`, {
+    fetch(`https://travelovidor.onrender.com/order/${user.email}`, {
       method: "GET",
       headers: {},
     }).then((res) => res.json())
@@ -39,7 +39,7 @@ const Order = () => {
   };
 
   const handleDelete = (id) => {
-    const url = `https://quiet-fortress-52901.herokuapp.com/payment/${id}`;
+    const url = `https://travelovidor.onrender.com/payment/${id}`;
     fetch(url, {
       method: "DELETE",
     })

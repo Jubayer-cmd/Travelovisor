@@ -14,7 +14,7 @@ const CheckoutForm = ({ Payment }) => {
   const { _id, price, name, email } = Payment;
 
   useEffect(() => {
-    fetch("https://quiet-fortress-52901.herokuapp.com/create-payment-intent", {
+    fetch("https://travelovidor.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -77,7 +77,7 @@ const CheckoutForm = ({ Payment }) => {
         package: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://quiet-fortress-52901.herokuapp.com/purchase/${_id}`, {
+      fetch(`https://travelovidor.onrender.com/purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

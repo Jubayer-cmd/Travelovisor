@@ -13,7 +13,7 @@ const Package = () => {
   const { id } = useParams();
   const [pack, setPack] = useState([]);
   useEffect(() => {
-    const url = `https://quiet-fortress-52901.herokuapp.com/travel/${id}`;
+    const url = `https://travelovidor.onrender.com/travel/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPack(data));
@@ -32,7 +32,7 @@ const Package = () => {
       date: Tdate,
     };
     if (user) {
-      fetch("https://quiet-fortress-52901.herokuapp.com/payment", {
+      fetch("https://travelovidor.onrender.com/payment", {
         method: "POST",
         headers: {
           "content-type": "application/json",
